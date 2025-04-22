@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+c# -*- coding: utf-8 -*-
 """
 Created on Thu Oct 10 18:57:23 2024
 
@@ -69,7 +69,7 @@ def tfidf(X):
         return tf * idf
 
 # read data
-file_fold = '/data/liying/work/data/Sim_tri/' #please replace 'file_fold' with the download path
+file_fold = '/data/liying/work/data/' #please replace 'file_fold' with the download path
 
 adata_omics1 = sc.read_h5ad(file_fold + 'adata_RNA.h5ad')
 adata_omics2 = sc.read_h5ad(file_fold + 'adata_ADT.h5ad')
@@ -89,22 +89,20 @@ sc.pp.log1p(adata_omics1)
 adata_omics1_high =  adata_omics1[:, adata_omics1.var['highly_variable']]
 
 gene3000 = adata_omics1_high.to_df()
-gene3000.to_csv('/data/liying/work/data/Sim_tri/results/RNA.csv', sep=',', index=True, header=True)
+gene3000.to_csv('/data/liying/work/data/results/RNA.csv', sep=',', index=True, header=True)
 
 
 # Protein
 adata_omics2 = clr_normalize_each_cell(adata_omics2)
 mmtv_ADT = adata_omics2.to_df()
-mmtv_ADT.to_csv('/data/liying/work/data/Sim_tri/results/ADT.csv', sep=',', index=True, header=True)
+mmtv_ADT.to_csv('/data/liying/work/data/results/ADT.csv', sep=',', index=True, header=True)
 
 
 # ATAC
-sc.pp.highly_variable_genes(adata_omics3, flavor="seurat_v3", n_top_genes=3000)
-adata_omics3_high =  adata_omics3[:, adata_omics3.var['highly_variable']]
-lsi(adata_omics3, use_highly_variable=False, n_components=n_protein + 1)
+lsi(adata_omics3, use_highly_variable=False, n_components=n_protein + 1)#revise
 adata_omics3.obsm['feat'] = adata_omics3.obsm['X_lsi'].copy()
 feat_data = adata_omics3.obsm['feat']
 feat_df = pd.DataFrame(feat_data, index=adata_omics3.obs_names)
-output_file = "/data/liying/work/data/Sim_tri/results/ATAC_lsi.csv"
+output_file = "/data/liying/work/data/results/ATAC_lsi.csv"
 feat_df.to_csv(output_file, sep=',', index=True, header=True)
 
