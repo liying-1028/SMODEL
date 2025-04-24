@@ -19,7 +19,7 @@ cd SMODEL
 
 Take the dataset "simulated  spatial triple-omics" as an example
 
-- Step 1: You can preprocess the data and prepare the results (poolsget) of the base clustering method  as input for the model training:
+- Step 1: Prepare the data. The SMODEL takes the preprocessed data and the base clustering results (`poolsget`) as input. For data preprocessing, please refer to the following script:
 
   ```python
   Data_processing.py
