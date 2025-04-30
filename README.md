@@ -2,12 +2,19 @@
 
 
 ## Usage
-### Clone this repo.
+### Clone this repo
 ```matlab
 git clone https://github.com/liying-1028/SMODEL.git
 cd SMODEL
 ```
+## Requirements
 
+Before running SMODEL, please ensure the following MATLAB toolboxes are installed:
+
+- **Statistics and Machine Learning Toolbox**
+- **Deep Learning Toolbox**
+
+  
 ### Code description
 
 - ```Data_processing.py```: Data preprocessing  
