@@ -1,12 +1,5 @@
 # SMODEL
 
-
-## Usage
-### Clone this repo
-```matlab
-git clone https://github.com/liying-1028/SMODEL.git
-cd SMODEL
-```
 ## Requirements
 
 Before running SMODEL, please ensure the following MATLAB toolboxes are installed:
@@ -14,6 +7,12 @@ Before running SMODEL, please ensure the following MATLAB toolboxes are installe
 - **Statistics and Machine Learning Toolbox**
 - **Deep Learning Toolbox**
 
+## Usage
+### Clone this repo
+```matlab
+git clone https://github.com/liying-1028/SMODEL.git
+cd SMODEL
+```
   
 ### Code description
 
