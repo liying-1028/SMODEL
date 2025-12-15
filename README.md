@@ -48,5 +48,5 @@ After preprocessing, the data should be organized and saved into a MATLAB `.mat`
 
 ### Note: 
 
-- To reduce your time, we have uploaded our preprocessed data into the folder 'data'. You can perform the corresponding steps selectively.
+- To reduce the time required for reproduction, we have uploaded our preprocessed data into the folder `data`. Users may directly use these files and skip Step 1 if desired.
 - To reproduce the result, you should use the default parameters. For new datasets, we recommend starting with the default configuration (see `Run_SMODEL_real_data.m`).  Additionally, you may adjust the parameters according to the unique characteristics of your dataset to attain the best possible outcomes.
