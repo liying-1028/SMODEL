@@ -30,6 +30,8 @@ Take the dataset "simulated  spatial triple-omics" as an example
   ```python
   Data_processing.py
   ```
+After preprocessing, the data should be organized and saved into a MATLAB `.mat` file, which will be directly used by SMODEL. We provide an example MATLAB script, `DataMat.m`, for generating this file.
+
 
 - Step 2: Main running pipeline:
 
